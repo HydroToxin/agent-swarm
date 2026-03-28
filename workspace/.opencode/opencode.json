@@ -1,0 +1,178 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "autoupdate": true,
+  "snapshot": false,
+  "plugin": [
+    "envsitter-guard@latest",
+    "@franlol/opencode-md-table-formatter@latest"
+  ],
+  "agent": {
+  },
+  "provider": {
+    "llama.cpp": {
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://localhost:1235/v1",
+        "timeout": 600000,
+        "chunkTimeout": 45000
+      },
+      "models": {
+        "codellama-7b-instruct.Q4_K_M": {
+          "name": "CodeLlama 7B (Q4_K_M)",
+          "tools": true
+        },
+        "gemma-2-9b-it-q4_k_m": {
+          "name": "Gemma 2 9B (Q4_K_M)",
+          "tools": true
+        },
+        "gpt-oss-20b-F16": {
+          "name": "GPT-Oss 20B (F16)",
+          "tools": true,
+          "reasoning_effort": "low",
+          "options": {
+            "reasoning_effort": "low"
+          }
+        },
+        "gpt-oss-20b-mxfp4": {
+          "name": "GPT-Oss 20B (MXFP4)",
+          "tools": true
+        },
+        "LiquidAI_LFM2-24B-A2B-Q4_K_M": {
+          "name": "LiquidAI LFM2 24B (Q4_K_M)",
+          "tools": true
+        },
+        "Llama-3.1-8B-Instruct-UD-Q6_K_XL": {
+          "name": "Llama 3.1 8B Instruct (UD-Q6_K_XL)",
+          "tools": true
+        },
+        "Llama-3.1-8B-Instruct-UD-Q8_K_XL": {
+          "name": "Llama 3.1 8B Instruct (UD-Q8_K_XL)",
+          "tools": true
+        },
+        "Meta-Llama-3.1-8B-Instruct-Q8_0": {
+          "name": "Meta Llama 3.1 8B Instruct (Q8_0)",
+          "tools": true
+        },
+        "Ministral-3-14B-Instruct-2512-UD-Q4_K_XL": {
+          "name": "Ministral 3 14B Instruct (UD-Q4_K_XL)",
+          "tools": true
+        },
+        "Ministral-3-14B-Instruct-2512-UD-Q5_K_XL": {
+          "name": "Ministral 3 14B Instruct (UD-Q5_K_XL)",
+          "tools": true
+        },
+         "Ministral-3-14B-Instruct-2512-UD-Q6_K_XL": {
+          "name": "Ministral 3 14B Instruct (UD-Q6_K_XL)",
+          "tools": true
+        },
+        "Ministral-3-14B-Reasoning-2512-UD-Q6_K_XL": {
+          "name": "Ministral 3 14B Reasoning (UD-Q6_K_XL)",
+          "tools": true
+        },
+        "Ministral-8B-Instruct-2410-Q4_K_M": {
+          "name": "Ministral 8B Instruct (Q4_K_M)",
+          "tools": true
+        },
+        "Phi-3-mini-4k-instruct-q4": {
+          "name": "Phi-3 Mini 4K Instruct (Q4)",
+          "tools": true
+        },
+        "Qwen3-30B-A3B-Instruct-2507-UD-Q3_K_XL": {
+          "name": "Qwen3 30B A3B Instruct (UD-Q3_K_XL)",
+          "tools": true
+        },
+        "Qwen3-30B-A3B-Thinking-UD-Q3_K_XL": {
+          "name": "Qwen3 30B A3B Thinking (UD-Q3_K_XL)",
+          "tools": true
+        },
+        "Qwen3-Coder-30B-A3B-Instruct-Q3_K_M": {
+          "name": "Qwen3 Coder 30B A3B Instruct (Q3_K_M)",
+          "tools": true
+        },
+        "Qwen3-Coder-30B-A3B-Instruct-UD-Q2_K_XL": {
+          "name": "Qwen3 Coder 30B A3B Instruct (UD-Q2_K_XL)",
+          "tools": true
+        },
+        "Qwen3-Coder-30B-A3B-Instruct-UD-Q3_K_XL": {
+          "name": "Qwen3 Coder 30B A3B Instruct (UD-Q3_K_XL)",
+          "tools": true
+        },
+        "Qwen3-Coder-30B-A3B-Instruct-1M-UD-Q3_K_XL": {
+          "name": "Qwen3-Coder-30B-A3B-Instruct (1M-UD-Q3_K_XL)",
+          "tools": true,
+          "tool_call": true,
+          "reasoning": true
+        },
+        "Qwen3.5-9B.Q8_0": {
+          "name": "Qwen3.5-9b",
+          "tools": true,
+          "reasoning_effort": "low",
+          "tool_call": true,
+          "reasoning": true
+        },
+        "omnicoder-9b-q8_0": {
+          "name": "Omnicoder-9b",
+          "tools": true,
+          "reasoning_effort": "low",
+          "tool_call": true,
+          "reasoning": true
+        },
+        "Qwen3.5-35B-A3B-UD-Q2_K_XL": {
+          "name": "Qwen3.5-35B-A3B (Q2_K_XL)",
+          "tools": true,
+          "reasoning_effort": "medium",
+          "tool_call": true,
+          "reasoning": true,
+          "options": {
+            "stream": true,
+            "n_keep": 1024,
+            "ctx_size": 131072,
+            "temperature": 0.6,
+            "top_p": 0.95,
+            "top_k": 20,
+            "min_p": 0.0,
+            "mirostat": 0,
+            "repeat_penalty": 1.0,
+            "max_tokens": 2000,
+            "tool_choice": "auto",
+            "verbose": false,
+            "reasoning_effort": "medium"
+          }
+        },
+        "Qwen3.5-35B-A3B-UD-Q3_K_XL": {
+          "name": "Qwen3.5-35B-A3B (Q3_K_XL)",
+          "tools": true,
+          "reasoning_effort": "lmedium",
+          "tool_call": true,
+          "reasoning": true,
+          "options": {
+            "reasoning_effort": "medium"
+          }
+        }
+      }
+    }
+  },
+  "mcp": {},
+  "lsp": {
+    "markdown": {
+      "command": [
+        "node",
+        "/home/hydrotoxin/.npm-global/lib/node_modules/markdownlint-lsp/lib/index.mjs",
+        "--stdio"
+      ],
+      "extensions": [
+        ".md"
+      ],
+      "initialization": {
+        "config": {
+          "default": true,
+          "MD013": {
+            "line_length": 120
+          },
+          "MD033": false,
+          "MD041": false
+        }
+      }
+    }
+  }
+}
